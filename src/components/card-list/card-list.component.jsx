@@ -1,6 +1,6 @@
 import React from "react"
 
-import "card-list.styles.css"
+import "./card-list.styles.css"
 
 const CardList = (props) => {
   console.log(props.children)
