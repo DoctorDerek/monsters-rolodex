@@ -22,11 +22,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <CardList>
-          {this.state.monsters.map((monster) => (
-            <div key={monster.id}>{monster.name}</div>
-          ))}
-        </CardList>
+        <CardList monsters={this.state.monsters}></CardList>
       </div>
     )
   }

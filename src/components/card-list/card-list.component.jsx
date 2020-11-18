@@ -2,9 +2,16 @@ import React from "react"
 
 import "./card-list.styles.css"
 
-const CardList = (props) => {
-  console.log(props.children)
-  return <div className="card-list">{props.children}</div>
+import Card from "../card/card.component"
+
+const CardList = ({ monsters }) => {
+  return (
+    <div className="card-list">
+      {monsters.map((monster) => (
+        <Card monster={monster}></Card>
+      ))}
+    </div>
+  )
 }
 
 export default CardList
