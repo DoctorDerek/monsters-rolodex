@@ -10,7 +10,7 @@ const App = () => {
 
   // The empty array as a second argument makes useEffect
   // run only one time, when the page loads, equivalent
-  // to the ComponentDidMount() lifecycle method.
+  // to the componentDidMount() lifecycle method.
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
