@@ -29,7 +29,10 @@ export default class App extends Component {
     return (
       <div className="App">
         <h1>Class Component App with this.setState</h1>
-        <input type="search" onChange={(event) => updateSearch(event.target)} />
+        <input
+          type="search"
+          onChange={(event) => updateSearch(event.target.value)}
+        />
         <CardList monsters={this.state.monsters}></CardList>
       </div>
     )
