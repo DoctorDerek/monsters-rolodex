@@ -29,11 +29,7 @@ const App = () => {
       <h1>Function Component App with React Hooks</h1>
       <input
         type="search"
-        onChange={(event) =>
-          setSearchField(() => {
-            return event.target.value
-          })
-        }
+        onChange={(event) => setSearchField(() => event.target.value)}
       />
       <CardList monsters={monsters}></CardList>
     </div>
