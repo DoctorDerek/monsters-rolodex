@@ -21,17 +21,16 @@ export default class App extends Component {
   }
 
   render() {
-    const updateSearch = (text) => {
-      this.setState({ searchField: text }, () => {
-        console.log(text)
-      })
-    }
     return (
       <div className="App">
         <h1>Class Component App with this.setState</h1>
         <input
           type="search"
-          onChange={(event) => updateSearch(event.target.value)}
+          onChange={(event) => {
+            this.setState({ searchField: event.target.value }, () => {
+              console.log(this.state.searchField)
+            })
+          }}
         />
         <CardList monsters={this.state.monsters}></CardList>
       </div>
