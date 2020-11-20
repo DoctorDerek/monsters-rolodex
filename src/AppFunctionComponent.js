@@ -8,6 +8,9 @@ const App = () => {
   const [monsters, setMonsters] = useState([])
   const [searchField, setSearchField] = useState("")
 
+  // The empty array as a second argument makes useEffect
+  // run only one time, when the page loads, equivalent
+  // to the ComponentDidMount() lifecycle method.
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
