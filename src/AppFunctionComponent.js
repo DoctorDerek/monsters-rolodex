@@ -24,6 +24,10 @@ const App = () => {
     console.log(searchField)
   })
 
+  const filteredMonsters = monsters.filter((monster) =>
+    monster.name.toLocaleLowerCase().includes(searchField.toLocaleLowerCase())
+  )
+
   return (
     <div className="App">
       <h1>Function Component App with React Hooks</h1>
@@ -32,7 +36,7 @@ const App = () => {
         placeholder="search monsters"
         onChange={(event) => setSearchField(() => event.target.value)}
       />
-      <CardList monsters={monsters}></CardList>
+      <CardList monsters={filteredMonsters}></CardList>
     </div>
   )
 }

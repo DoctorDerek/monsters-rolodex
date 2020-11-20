@@ -21,6 +21,10 @@ export default class App extends Component {
   }
 
   render() {
+    const { monsters, searchField } = this.state
+    const filteredMonsters = monsters.filter((monster) =>
+      monster.name.toLocaleLowerCase().includes(searchField.toLocaleLowerCase())
+    )
     return (
       <div className="App">
         <h1>Class Component App with this.setState</h1>
@@ -29,11 +33,11 @@ export default class App extends Component {
           placeholder="search monsters"
           onChange={(event) => {
             this.setState({ searchField: event.target.value }, () => {
-              console.log(this.state.searchField)
+              console.log(searchField)
             })
           }}
         />
-        <CardList monsters={this.state.monsters}></CardList>
+        <CardList monsters={filteredMonsters}></CardList>
       </div>
     )
   }
