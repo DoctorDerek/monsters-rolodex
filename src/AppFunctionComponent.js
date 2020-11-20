@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react"
 
-import CardList from "./components/card-list/card-list.function-component.jsx"
+import CardList from "./components/card-list/card-list.component.jsx"
 
 import "./App.css"
+import SearchBox from "./components/search-box/search-box.component.jsx"
 
 const App = () => {
   const [monsters, setMonsters] = useState([])
@@ -31,11 +32,10 @@ const App = () => {
   return (
     <div className="App">
       <h1>Function Component App with React Hooks</h1>
-      <input
-        type="search"
+      <SearchBox
         placeholder="search monsters"
-        onChange={(event) => setSearchField(() => event.target.value)}
-      />
+        handleChange={(event) => setSearchField(() => event.target.value)}
+      ></SearchBox>
       <CardList monsters={filteredMonsters}></CardList>
     </div>
   )
