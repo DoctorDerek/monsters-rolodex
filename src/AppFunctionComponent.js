@@ -17,6 +17,9 @@ const App = () => {
       .then((users) => setMonsters(() => users))
   }, [])
 
+  // Runs every time the component re-renders, creating
+  // an effect similar to passing in a callback function
+  // as the second argument to this.setState() in a class.
   useEffect(() => {
     console.log(searchField)
   })
