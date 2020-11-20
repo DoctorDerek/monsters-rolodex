@@ -15,6 +15,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <h1>Function Component App with React Hooks</h1>
       <CardList monsters={monsters}></CardList>
     </div>
   )

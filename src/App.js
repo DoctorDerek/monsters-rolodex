@@ -22,6 +22,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>Class Component App with this.setState</h1>
         <CardList monsters={this.state.monsters}></CardList>
       </div>
     )
