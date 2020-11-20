@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react"
 
 import CardList from "./components/card-list/card-list.component.jsx"
+import SearchBox from "./components/search-box/search-box.component.jsx"
 
 import "./App.css"
-import SearchBox from "./components/search-box/search-box.component.jsx"
 
 const App = () => {
   const [monsters, setMonsters] = useState([])
