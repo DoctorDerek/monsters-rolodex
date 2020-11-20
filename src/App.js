@@ -26,6 +26,7 @@ export default class App extends Component {
         <h1>Class Component App with this.setState</h1>
         <input
           type="search"
+          placeholder="search monsters"
           onChange={(event) => {
             this.setState({ searchField: event.target.value }, () => {
               console.log(this.state.searchField)

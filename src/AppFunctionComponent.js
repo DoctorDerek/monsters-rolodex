@@ -29,6 +29,7 @@ const App = () => {
       <h1>Function Component App with React Hooks</h1>
       <input
         type="search"
+        placeholder="search monsters"
         onChange={(event) => setSearchField(() => event.target.value)}
       />
       <CardList monsters={monsters}></CardList>
